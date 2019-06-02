@@ -1,0 +1,36 @@
+<p>
+  test works!
+</p>
+<p class="text-success">
+   Angular 8
+</p>
+<p [class]="SuccessClass">
+  Angular 8-Class binding
+</p>
+<h2 [class.text-danger]="HasError">
+  Show error message
+</h2>
+<h2 [ngClass]="MessageClasses">Applying differenct clsses based on value</h2>
+<h2 [style.color]="'orange'">Style Binding</h2>
+<h2 [style.color]="HasError ? 'red' : 'green'">Style Binding with condtions</h2>
+<h2 [ngStyle]="titleStyle">Usage of ngStyle</h2>
+<button (click)="greeting='Welcome Sagar'">Greet</button>
+{{greeting}}
+<label>Below is Templete reference variable example</label><br>
+<input type="text" #myInput />
+<button (click)="logMessage(myInput.value)">Log</button>
+
+<div>
+  <p>Two Way data binding</p>
+  <input [(ngModel)]="name" type="text" />{{name}}
+</div>
+
+<div>
+  <p>Structural Directives->ngIf, ngSwitch, ngFor </p>
+  <h2 *ngIf="IsDisplay; else ElseBlock">
+    Show this when value is true
+  </h2>
+  <h2 #ElseBlock>
+    show this when false
+  </h2>
+</div>
